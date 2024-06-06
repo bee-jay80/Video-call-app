@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Room</title>
+    <link rel="stylesheet" href="{% static 'css/log-in.css' %}">
+</head>
+<style>
+    body{
+        background-color: #a3baf9;
+    }
+</style>
+<body>
+    <div class="wrapper">
+        <div class="title">
+            Join Room
+        </div>
+        <form action="{% url 'joinroom' %}" method="POST">
+            {% csrf_token %}
+            <div class="field">
+                <input type="text" id="room" name="roomID" required placeholder="Enter room id">
+            </div>
+            <br><br>
+            <div class="field">
+                <input type="submit" value="Join">
+            </div>
+        </form>
+    </div>
+</body>
+<script>
+    document.getElementById("room").focus()
+</script>
+</html>

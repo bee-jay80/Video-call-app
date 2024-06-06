@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: #4070f4;
+    }
+
+    .new {
+        width: 250px;
+        height: 60px;
+        background: #a3baf9;
+        border: 2px solid #021241;
+        align-items: center;
+        padding-bottom: 11px;
+        margin-top: 10px;
+        border-radius: 5px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+</style>
+
+<body>
+    <center>
+        <h1>Welcome <b>{{name}}</b></h1>
+        <a href="{% url 'meeting' %}">
+            <div class="new">
+                <h1>New Meeting</h1>
+            </div>
+        </a>
+        <a href="{% url 'joinroom' %}">
+            <div class="new">
+                <h1> Join Meeting</h1>
+            </div>
+        </a>
+        <a href="{% url 'logout' %}">
+            <div class="new">
+                <h1>Logout</h1>
+            </div>
+        </a>
+    </center>
+</body>
+
+</html>
